@@ -5,35 +5,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pedido</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <title>ConsultoriaPapaiNoel</title>
     <link rel="stylesheet" href="Style.css">
 </head>
 
 
 <body>
     <div class="pedido">
-        <h1>Quer namorar comigo?</h1>
+        <h1>Você foi um bom garoto(a)?</h1>
     </div>
     <div class="conteiner">
         <button class="botão" id="botãosim">Sim</button>
         <button class="botão" id="botãonão">Não</button>
     </div>
-    <footer id="respostasim">
+    <footer id="respostanao">
     </footer>
 
 
     <div class="imagem">
            
     </div>
-    
+
     <script>
         const sim = window.document.getElementById("botãosim");
         const nao = window.document.getElementById("botãonão"); 
-        const resp = window.document.getElementById("respostasim");
+        const resp = window.document.getElementById("respostanao");
 
 
         function moverBotao() {
-            var botao = nao;
+            var botao = sim;
             var novoX = Math.random() * window.innerWidth;
             var novoY = Math.random() * window.innerHeight;
 
@@ -49,44 +50,44 @@
         function entrar() {
             estado++;
             if (estado === 0) {
-                sim.style.transform = "translate(50%)";
-                nao.style.transform = "translate(130px, -150px)";
+                nao.style.transform = "translate(50%)";
+                sim.style.transform = "translate(90px, -80px)";
             }
             if (estado == 1) {
-                nao.style.transform = "translate(130px, 150px)"; 
+                sim.style.transform = "translate(70px, 90px)"; 
             }
             if (estado == 2) {
-                nao.style.transform = "translate(-325px, 150px)";
+                sim.style.transform = "translate(-30px, 60px)";
             }
             if (estado == 3) {
-                nao.style.transform = "translate(-325px, -150px)";
+                sim.style.transform = "translate(-40px, -60px)";
             }
             if (estado == 4) {
-                nao.style.transform = "translate(135px, 150px)";
+                sim.style.transform = "translate(30px, 60px)";
             }
             if (estado == 5) {
-                nao.style.transform = "translate(135px, -150px)";
+                sim.style.transform = "translate(50px, -10px)";
             }
             if (estado == 6) {
-                nao.style.transform = "translate(-325px, 150px)";
+                sim.style.transform = "translate(-80px, 90px)";
             }
             if (estado == 7) {
-                nao.style.transform = "translate(-325px, -150px)";
+                sim.style.transform = "translate(-90px, -90px)";
                 estado = -1;
             }
         }
 
 
-        nao.addEventListener("mouseenter", entrar);
+        sim.addEventListener("mouseenter", entrar);
 
 
-        sim.addEventListener("click", clicar);
+        nao.addEventListener("click", clicar);
 
 
         function clicar() {
-            resp.innerHTML = "Eu te amo meu amor!!"; 
-            sim.style.transform = "translate(0px)";
-            nao.style.transform = "translate(0px, 0px)";
+            resp.innerHTML = "Não foi um bom garoto(a)?, infelizmente você não ganhará presente! kkkkkk"; 
+            nao.style.transform = "translate(0px)";
+            sim.style.transform = "translate(0px, 0px)";
 
 
             resp.style.opacity = 1;
