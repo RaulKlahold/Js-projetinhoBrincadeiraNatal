@@ -1,50 +1,41 @@
 body {
-    height: fit-content;
-    background-color: #EEEEEE;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Adicionei uma cor de fundo para melhor visualização */
 }
 
-
 .botão {
-    padding: 10% 20px;
+    padding: 10px 20px; /* Ajustei o padding para algo mais razoável */
     cursor: pointer;
     background-color: #B0CFEE;
     color: #155793;
+    margin: 10px; /* Adicionei um espaçamento entre os botões */
 }
-
 
 .conteiner {
-    position: absolute;
-    top: 80%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 10px 20px;
-    cursor: pointer;
+    text-align: center;
 }
-
-
-.imagem {
-    width: fit-content;
-    left: auto;
-    margin: auto;
-    display: block;
-    pointer-events: none;
-}
-
 
 .pedido {
-    position: absolute;
-    top: 68%;
-    left: 42%;
+    text-align: center;
     color: #155793;
 }
-
 
 footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 50px;
-    transition: all.5s;
+    font-size: 20px; /* Reduzi o tamanho da fonte para melhorar a aparência */
+    transition: all 0.5s;
     color: #155793;
-    top: 70%;
+    margin-top: 20px; /* Adicionei um espaçamento superior */
 }
+
+
+
+
